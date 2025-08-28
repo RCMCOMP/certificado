@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" href="image/logou.png" type="image/png" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UTO Verifica</title>
+<style>
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    color: #000;
+  }
+  /* Top bar */
+  .top-bar {
+    background-color: #b32d03;
+    color: #fff;
+    font-size: 12px;
+    padding: 6px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: normal;
+    user-select: none;
+  }
+  /* Header */
+  header {
+    padding: 20px 15px 30px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+  .logo-container {
+    flex: 0 0 auto;
+  }
+  .logo-container img {
+    width: 130px; /* Tamaño más grande del logo */
+    max-width: 100%;
+    height: auto;
+    border: 0px solid #00000010;
+  }
+  h1 {
+    flex: 1 1 auto;
+    font-weight: 100;
+    font-size: 2.2rem;
+    margin: 0;
+    line-height: 1.2;
+    text-align: center;
+  }
+  h1 .highlight {
+    color: #b32d03;
+  }
+  /* Document info card */
+  .doc-card {
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+  }
+  .doc-card .header {
+    background: #f9f9f9;
+    font-size: 1.15rem;
+    padding: 10px 20px;
+    color: #000;
+    border-bottom: 1px solid #ddd;
+  }
+  .doc-card .header .type-label {
+    color: #b32d03;
+  }
+  .doc-body {
+    padding: 20px;
+  }
+  .doc-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 1.15rem;
+  }
+  .doc-label {
+    flex: 1 1 auto;
+    font-weight: normal;
+  }
+  .doc-value {
+    flex: 1 1 auto;
+    text-align: right;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  /* Responsivo para pantallas pequeñas */
+  @media (max-width: 650px) {
+    .doc-row {
+      flex-direction: column; /* Hace que los elementos se apilen verticalmente */
+      align-items: flex-start; /* Alinea los elementos a la izquierda */
+    }
+
+    .doc-label,
+    .doc-value {
+      flex: 1 1 100%; /* Asegura que ambos se ocupen el 100% del ancho */
+      text-align: left; /* Alinea el texto a la izquierda */
+      font-size: 1.2rem; /* Ajusta el tamaño de fuente si es necesario */
+    }
+  }
+  /* Important notice section */
+  .important-section {
+    background: #fafafa;
+    border-top: 1px solid #ddd;
+    padding: 15px 20px;
+    font-size: 0.55rem;
+    color: #555;
+  }
+  .important-section b {
+    font-weight: 700;
+    font-size: .75rem; 
+  }
+  /* Footer */
+  footer {
+    background-color: #b32d03;
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 14px 10px;
+    user-select: none;
+  }
+  footer strong {
+    font-weight: 600;
+  }
+.highlight-footer {
+    color: #000000; /* Cambiar a negro */
+  }
+  /* Responsive */
+  @media (max-width: 650px) {
+    header {
+      justify-content: flex-start;
+      gap: 10px;
+    }
+    .logo-container {
+      flex: 0 1 100px;
+    }
+    h1 {
+      flex: 1 1 100%;
+      font-size: 2.1rem;
+      text-align: left;
+    }
+    .doc-row {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 6px;
+    }
+    .doc-label,
+    .doc-value {
+      flex: 1 1 45%;
+      text-align: left;
+      font-size: 1.rem;
+      text-transform: none;
+    }
+    .doc-value {
+      font-weight: normal;
+    }
+    .doc-card {
+      margin: 20px 15px 40px 15px;
+    }
+      /* Responsivo para pantallas pequeñas */
+  @media (max-width: 650px) {
+    .important-section {
+      line-height: 2.3; /* Ajusta este valor para controlar el espacio entre líneas */
+    }
+    .doc-card {
+      margin-top: 0; /* Elimina cualquier margen superior en la tarjeta de documentos */
+    }
+     /* Si quieres ajustar el espacio entre las etiquetas y los valores */
+    .doc-label,
+    .doc-value {
+      margin-bottom: 5px; /* Agrega un pequeño espacio entre el texto y el valor */
+    }
+  }
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar" aria-label="Información de contacto y enlace web">
+    <div>https://www.uto.edu.bo</div>
+    <div>Telefono : (591) (2) - 5250100</div>
+  </div>
+  <header>
+    <div class="logo-container" role="img" aria-label="Logo de la Universidad Técnica de Oruro, está dentro de un círculo con colores rojo, blanco y azul, contiene un escudo en el centro con montaña y símbolos técnicos">
+      <img 
+        src="image/logou.png" 
+        alt="Logo redondo de la Universidad Técnica de Oruro con escudo central y símbolos técnicos en colores rojo, blanco y azul" 
+        onerror="this.onerror=null;this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7648f19d-e770-4a51-84a9-04d60482159e.png';"
+      />
+    </div>
+    <h1>Verificación de <span class="highlight">Documentos</span></h1>
+  </header>
+
+  <section class="doc-card" aria-labelledby="doc-type-label" role="region" tabindex="0">
+    <div class="header" id="doc-type-label">
+      Tipo de Documento: <span class="type-label">Título</span>
+    </div>
+    <div class="doc-body">
+      <div class="doc-row">
+        <div class="doc-label">Nombre Completo:</div>
+        <div class="doc-value">Olivera López Reynaldo</div>
+      </div>
+      <div class="doc-row">
+        <div class="doc-label">Número de Documento de Identidad:</div>
+        <div class="doc-value">6714384</div>
+      </div>
+      <div class="doc-row">
+        <div class="doc-label">Denominativo:</div>
+        <div class="doc-value">LICENCIADO EN INGENIERÍA DE MINAS</div>
+      </div>
+    </div>
+    <div class="important-section" role="note">
+      <b>IMPORTANTE</b><br />
+      La Información contenida en la presente no constituye una certificación del documento. Toda certificación o fotocopia legalizada debe ser tramitada personalmente en las oficinas de Secretaría General de la Universidad Técnica de Oruro.
+    </div>
+  </section>
+
+  <footer>
+  Copyright 2020 DTIC - UTO <span class="highlight-footer">Verificación de documentos de la Universidad Técnica de Oruro</span>
+</footer>
+</body>
+</html>
